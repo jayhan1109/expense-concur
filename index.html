@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@400;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Expense Concur</title>
+</head>
+
+<body>
+	<div class="expense-concur">
+		<div class="concur-container1">
+			<h1 class="title logo-color">Expense Concur</h1>
+			<div class="flex flex-space-evenly amount">
+				<div class="flex flex-dir-col income">
+					<h4>INCOME</h4>
+					<p>0</p>
+				</div>
+				<div class="flex flex-dir-col expense">
+					<h4>EXPENSE</h4>
+					<p>0</p>
+				</div>
+			</div>
+			<div class="flex flex-dir-col flex-align-center">
+				<h3>Add Transaction</h3>
+				<form>
+					<div>
+						<label for="category">Category</label>
+						<select name="category" id="category">
+							<option value="grocery">Grocery</option>
+							<option value="restaurant">Restaurant</option>
+							<option value="transit">Transit</option>
+							<option value="car">Car</option>
+							<option value="home">Home</option>
+							<option value="other">Other</option>
+							<option value="income">Income</option>
+						</select>
+					</div>
+					<div>
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div>
+						<label for="amount">Amount</label>
+						<input type="text" name="amount" id="amount" />
+					</div>
+					<button class="common-btn transaction-btn">Make Transaction</button>
+				</form>
+			</div>
+			<div class="flex flex-dir-col flex-align-center">
+				<h3>Transaction History</h3>
+				<div class="history-container"></div>
+			</div>
+		</div>
+		<div class="flex-1 concur-container2">
+			<div class="chart-container" style="height: 480px; width:480px; position: relative;">
+			</div>
+			<div class="category-container">
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./index.js"></script>
+	</script>
+</body>
+
+</html>
